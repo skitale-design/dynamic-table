@@ -1,20 +1,20 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
-          <SystemElement/>
-      </div>
+      <div class="row"><TheMain/></div>
+      <div class="row"><SystemElement/></div>
     </div>
   </div>
 </template>
 
 <script>
+import TheMain from './components/TheMain.vue'
 import SystemElement from './components/SystemElement/index.vue'
 
 export default {
   name: 'App',
   components: {
-    SystemElement
+    SystemElement,TheMain
   }
 }
 </script>
