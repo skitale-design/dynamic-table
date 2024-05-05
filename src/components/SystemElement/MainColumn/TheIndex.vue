@@ -2,13 +2,13 @@
   <div class="col grey">
     <div class="row">
       <div class="col">
-        <div class="row"><div class="col" @click="hide()">Csldffjsa</div></div>
+        <div class="row"><div class="col" @click="hide()">При клике будет исчезать колонка Роль1</div></div>
         <div class="row">
-          <RoleAndContent :class="{red:hidden == 1, blue:hidden == 0}"/>
-          <RoleAndContent />
-          <RoleAndContent />
-          <RoleAndContent />
-          <RoleAndContent />
+          <RoleAndContent msg="Роль 1" :class="{hidden:hidden == true}"/>
+          <RoleAndContent msg="Роль 2" />
+          <RoleAndContent msg="Роль 3" />
+          <RoleAndContent msg="Роль 4" />
+          <RoleAndContent msg="Роль 5" />
         </div>
       </div>
     </div>
