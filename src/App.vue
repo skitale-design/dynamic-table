@@ -2,21 +2,19 @@
   <div>
     <div class="container">
       <div class="row">
-        <SummColumn></SummColumn>
-        <MainColumn></MainColumn>
+          <SystemElement/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SummColumn from './components/SummColumn.vue'
-import MainColumn from './components/MainColumn/index.vue'
+import SystemElement from './components/SystemElement/index.vue'
 
 export default {
   name: 'App',
   components: {
-    SummColumn,MainColumn
+    SystemElement
   }
 }
 </script>
