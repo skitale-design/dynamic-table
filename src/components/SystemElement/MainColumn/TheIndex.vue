@@ -2,9 +2,9 @@
   <div class="col grey">
     <div class="row">
       <div class="col">
-        <div class="row"><div class="col" @click="hide">Cslfjsa</div></div>
+        <div class="row"><div class="col" @click="hide()">Csldffjsa</div></div>
         <div class="row">
-          <RoleAndContent :class="{red:user.id == 1, blue:user.id == 2}"/>
+          <RoleAndContent :class="{red:hidden == 1, blue:hidden == 0}"/>
           <RoleAndContent />
           <RoleAndContent />
           <RoleAndContent />
@@ -23,14 +23,8 @@
     
     function hide() {
         console.log("hide");
-        hidden == true;
+        hidden.value = !hidden.value;
     }
-
-    // hide();
-
-    // function hide() {
-    //     console.log("hide")
-    // }
 
 </script>
 
