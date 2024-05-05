@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="container">
+      <div class="row">
+        <SummColumn></SummColumn>
+        <MainColumn></MainColumn>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import FirstTry from './components/FirstTry.vue'
+import SummColumn from './components/SummColumn.vue'
+import MainColumn from './components/MainColumn/index.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SummColumn,MainColumn
   }
 }
 </script>
@@ -23,4 +31,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.red {background-color: rgb(255, 177, 177);}
+  .blue {background-color: rgb(184, 207, 255);}
+  .green {background-color: rgb(175, 255, 164);}
+  .grey {background-color: rgb(202, 202, 202);}
+  .purple {background-color: rgb(229, 190, 255);}
+  .yellow {background-color: rgb(223, 213, 155);}
+  
 </style>
