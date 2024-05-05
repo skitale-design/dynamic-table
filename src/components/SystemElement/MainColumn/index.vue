@@ -1,36 +1,48 @@
 <template>
-    <div class="col grey">
+  <div class="col grey">
+    <div class="row">
+      <div class="col">
+        <div class="row"><div class="col" @click="hide">Cslfjsa</div></div>
         <div class="row">
-            <div class="col">
-                <div class="row"><div class="col">Система 1</div></div>
-                <div class="row">
-                   <RoleAndContent/>
-                   <RoleAndContent/>
-                   <RoleAndContent/>
-                   <RoleAndContent/>
-                   <RoleAndContent/>
-                </div>
-            </div>
+          <RoleAndContent />
+          <RoleAndContent />
+          <RoleAndContent />
+          <RoleAndContent />
+          <RoleAndContent />
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-    import RoleAndContent from './RoleAndContent.vue'
+    import RoleAndContent from "./RoleAndContent.vue";
     export default {
-        name: 'MainColumn',
+        name: "MainColumn",
         components: {
             RoleAndContent
+        },
+        methods:{
+            hide() {
+                console.log("hide")
+            }
         }
-        }
+    };
+
+    // hide();
+
+    // function hide() {
+    //     console.log("hide")
+    // }
+
 </script>
 
 <style>
-    .rotated {
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-    }
-    .cell {
-        border: solid 1px grey
-    }
+.rotated {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+.cell {
+  border: solid 1px grey;
+}
 </style>
