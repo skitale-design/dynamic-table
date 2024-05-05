@@ -4,7 +4,7 @@
       <div class="col">
         <div class="row"><div class="col" @click="hide">Cslfjsa</div></div>
         <div class="row">
-          <RoleAndContent />
+          <RoleAndContent :class="{red:user.id == 1, blue:user.id == 2}"/>
           <RoleAndContent />
           <RoleAndContent />
           <RoleAndContent />
@@ -15,19 +15,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
+    import {ref} from 'vue'
     import RoleAndContent from "./RoleAndContent.vue";
-    export default {
-        name: "MainColumn",
-        components: {
-            RoleAndContent
-        },
-        methods:{
-            hide() {
-                console.log("hide")
-            }
-        }
-    };
+
+    const hidden = ref(false);
+    
+    function hide() {
+        console.log("hide");
+        hidden == true;
+    }
 
     // hide();
 
@@ -44,5 +41,9 @@
 }
 .cell {
   border: solid 1px grey;
+}
+
+.hidden{
+    display: none;
 }
 </style>
