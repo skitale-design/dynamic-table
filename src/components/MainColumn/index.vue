@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    import RoleAndContent from '../RoleAndContent.vue'
+    import RoleAndContent from './RoleAndContent.vue'
     export default {
         name: 'MainColumn',
         components: {
