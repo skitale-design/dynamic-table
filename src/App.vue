@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import FirstTry from './components/FirstTry.vue'
 import SummColumn from './components/SummColumn.vue'
 import MainColumn from './components/MainColumn/index.vue'
 
