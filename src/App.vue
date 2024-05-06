@@ -9,7 +9,7 @@
 
 <script>
 import TheMain from './components/TheMain.vue'
-import SystemElement from './components/SystemElement/TheIndex.vue'
+import SystemElement from './components/SystemElement/SystemElements.vue'
 
 export default {
   name: 'App',

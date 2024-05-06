@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-    import {state} from '../../StateStore.js' // global REACTIVE statestore
+    import {state} from '../../StateStore.js' 
     import RoleAndContent from "./RoleAndContent.vue";
 
     function hide() {
