@@ -1,5 +1,5 @@
 <template>
-  <div class="col grey" :class="{hidden:hidden == true}">
+  <div class="col grey" :class="{hidden:state.mainCol.hidden == true}">
     <div class="row">
       <div class="col">
         <div class="row"><div class="col" @click="hide()">Кликни и вся колонка скроется</div></div>
@@ -13,15 +13,12 @@
 </template>
 
 <script setup>
-    import {ref} from 'vue'
-    import {state} from '../../StateStore.js'
+    import {state} from '../../StateStore.js' // global REACTIVE statestore
     import RoleAndContent from "./RoleAndContent.vue";
-    console.log(state.mainCol.hidden);
-    const hidden = ref(false);
-    
+
     function hide() {
-        console.log("hide");
-        hidden.value = !hidden.value;
+      state.mainCol.hidden = true;
+      state.summCol.hidden = false;
     }
 
 </script>
