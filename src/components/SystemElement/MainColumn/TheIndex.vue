@@ -14,8 +14,9 @@
 
 <script setup>
     import {ref} from 'vue'
+    import {state} from '../../StateStore.js'
     import RoleAndContent from "./RoleAndContent.vue";
-
+    console.log(state.mainCol.hidden);
     const hidden = ref(false);
     
     function hide() {
