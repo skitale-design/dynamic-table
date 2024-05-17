@@ -2,21 +2,15 @@
   <div>
     <div class="container">
       <div class="row"><TheMain/></div>
-      <div class="row"><SystemElement/></div>
+      <!-- <div class="row"><SystemElement/></div> -->
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import TheMain from './components/TheMain.vue'
-import SystemElement from './components/SystemElement/SystemElements.vue'
+// import SystemElement from './components/SystemElement/TheIndex.vue'
 
-export default {
-  name: 'App',
-  components: {
-    SystemElement,TheMain
-  }
-}
 </script>
 
 <style>
