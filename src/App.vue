@@ -1,15 +1,18 @@
 <template>
   <div>
-    <div class="container">
-      <div class="row"><TheMain/></div>
-      <!-- <div class="row"><SystemElement/></div> -->
-    </div>
+    <!-- <div class="container"> -->
+      <!-- <div class="row"><TheMain/></div> -->
+      <!-- <div class="row"> -->
+        <OnlyDivs/>
+      <!-- </div> -->
+    <!-- </div> -->
   </div>
 </template>
 
 <script setup>
-import TheMain from './components/TheMain.vue'
-// import SystemElement from './components/SystemElement/TheIndex.vue'
+//import TheMain from './components/TheMain.vue'
+ //import SystemElement from './components/SystemElement/TheIndex.vue'
+import OnlyDivs from './components/OnlyDivs/OnlyDivs.vue'
 
 </script>
 
