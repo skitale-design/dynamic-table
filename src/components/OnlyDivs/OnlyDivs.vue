@@ -22,7 +22,7 @@
         clicks.value++;
         if (clicks.value === 1) {
             timer.value = setTimeout(() => {
-                left.value = left.value + 100; // сдвинуть вправо на 100 пикселей
+                left.value = left.value + 100; // //сдвинуть вправо на 100 пикселей
                 clicks.value = 0
             }, delay.value);
         } else {
