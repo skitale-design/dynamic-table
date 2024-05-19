@@ -16,11 +16,19 @@
         },
         msg:{
             type: String,
-            default: "cell"
+            default: "default"
+        },
+        top: {
+            type: String,
+            default: "10"
+        },
+        left: {
+            type: String,
+            default: "10"
         }
     })
-    const top = ref(100)
-    const left = ref(100)
+    const top = ref(props.top)
+    const left = ref(props.left)
 
     const delay = ref(300)
     const clicks = ref(0)
@@ -44,6 +52,15 @@
 
 <style>
     .cell {
+        position: absolute;
+        top: v-bind(top + 'px');
+        left: v-bind(left + 'px');
+        width: 100px;
+        height: 80px;
+        background-color: v-bind(props.color);
+    }
+
+    .name {
         position: absolute;
         top: v-bind(top + 'px');
         left: v-bind(left + 'px');
