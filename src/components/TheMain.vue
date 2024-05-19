@@ -21,6 +21,7 @@
         <div class="block header">header</div>
         <div class="block cell">cell</div>
         <div class="block cell">cell</div>
+        <div class="block cell">cell</div>
     </div>
 </template>
 
