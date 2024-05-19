@@ -1,5 +1,5 @@
 <template>
-    <div class="cell" @click="oneClick()">cell 1</div>
+    <div :class="props.class" @click="oneClick()">{{ msg }}</div>
 </template>
 
 <script setup>
@@ -9,6 +9,14 @@
         color: {
             type: String,
             default: "red"
+        },
+        class:{
+            type: String,
+            default:"cell"
+        },
+        msg:{
+            type: String,
+            default: "cell"
         }
     })
     const top = ref(100)

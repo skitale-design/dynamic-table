@@ -3,8 +3,8 @@
     <!-- <div class="container"> -->
       <!-- <div class="row"><TheMain/></div> -->
       <!-- <div class="row"> -->
-        <OnlyDivs color="blue"/>
-        <OnlyDivs color="yellow"/>
+        <OnlyDivs msg="blue" class="cell" color="blue"/>
+        <OnlyDivs msg="yellow" class="cell" color="yellow"/>
         <OnlyDivs />
       <!-- </div> -->
     <!-- </div> -->
