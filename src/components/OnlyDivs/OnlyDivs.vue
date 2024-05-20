@@ -62,7 +62,7 @@
         top: v-bind(top + 'px');
         left: v-bind(left + 'px');
         width: 100px;
-        height: 80px;
+        height: v-bind(props.height);
         background-color: v-bind(props.color);
     }
 
