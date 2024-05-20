@@ -15,7 +15,6 @@
 <script setup>
   import data from "./data/data.json";
   import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
-  console.log(Math.random())
 </script>
 
 <style>
