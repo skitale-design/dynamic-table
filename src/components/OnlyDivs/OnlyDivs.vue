@@ -19,12 +19,12 @@
             default: "default"
         },
         top: {
-            type: String,
-            default: "10"
+            type: Number,
+            default: 10
         },
         left: {
-            type: String,
-            default: "10"
+            type: Number,
+            default: 10
         }
     })
     const top = ref(props.top)
@@ -39,11 +39,13 @@
         if (clicks.value === 1) {
             timer.value = setTimeout(() => {
                 left.value = left.value + 100; // сдвинуть вправо на 100 пикселей 
+
                 clicks.value = 0
             }, delay.value);
         } else {
             clearTimeout(timer.value);
             top.value = top.value + 100 // сдвинуть вниз на 100 пикселей
+
             clicks.value = 0;
         }
     }

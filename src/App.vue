@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="el in elements" :key="el">
-      <OnlyDivs msg="30-30" class="cell" color="rgb(255, 177, 177)" :top="100+el" />
+      <OnlyDivs :msg=el class="cell" color="rgb(255, 177, 177)" :top="100+el" />
     </div>
   </div>
 </template>
