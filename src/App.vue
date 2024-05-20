@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-for="el in data" :key="el.id">
+    <div v-for="el in data.numbers" :key="el.id">
       <OnlyDivs
-        :msg="el.value"
+        :msg=el.value
         class="cell"
         color="rgb(255, 177, 177)"
         :top="100 + el.value"
