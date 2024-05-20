@@ -4,18 +4,18 @@
         "id": 1,
         "name": "System AAA",
         "cells": [
-          {"id": 0,"height": 90,"value": "Система А","color": { "r": 215, "g": 146, "b": 86 }},
-          {"id": 1,"height": 100,"value": "1","color": { "r": 215, "g": 146, "b": 86 }},
-          {"id": 2,"height": 100,"value": "2","color": { "r": 215, "g": 146, "b": 86 }}
+          {"id": 0,"class":"head", "height": 90,"value": "Система А","color": { "r": 215, "g": 146, "b": 86 }},
+          {"id": 1,"class":"cell", "height": 100,"value": "1","color": { "r": 215, "g": 146, "b": 86 }},
+          {"id": 2,"class":"cell", "height": 100,"value": "2","color": { "r": 215, "g": 146, "b": 86 }}
         ]
     },
     {
           "id": 2,
           "name": "System BBB",
           "cells": [
-            {"id": 0,"height": 90,"value": "Система Б","color": { "r": 255, "g": 186, "b": 186 }},
-            {"id": 1,"height": 100,"value": "1","color": { "r": 255, "g": 186, "b": 186 }},
-            {"id": 2,"height": 100,"value": "2","color": { "r": 255, "g": 186, "b": 186 }}
+            {"id": 0,"class":"head", "height": 90,"value": "Система Б","color": { "r": 255, "g": 186, "b": 186 }},
+            {"id": 1,"class":"cell", "height": 100,"value": "1","color": { "r": 255, "g": 186, "b": 186 }},
+            {"id": 2,"class":"cell", "height": 100,"value": "2","color": { "r": 255, "g": 186, "b": 186 }}
           ]
       }
   ]

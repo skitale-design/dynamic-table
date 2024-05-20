@@ -4,7 +4,7 @@
       <div v-for="el in sys.cells " :key="el.id">
         <OnlyDivs
           :msg=el.value
-          class="cell"
+          :class=el.class
           :left=sys.id*100
           :color=ObjectToColor(el.color)
           :top=el.id*el.height

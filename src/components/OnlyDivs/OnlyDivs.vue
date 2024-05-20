@@ -48,12 +48,12 @@
         background-color: v-bind(props.color);
     }
 
-    .name {
+    .head {
         position: absolute;
         top: v-bind(top + 'px');
         left: v-bind(left + 'px');
         width: 100px;
-        height: v-bind(props.height);
+        height: v-bind(props.height+'px');
         background-color: v-bind(props.color);
     }
 </style>
