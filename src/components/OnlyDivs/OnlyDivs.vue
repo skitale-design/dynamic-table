@@ -38,13 +38,13 @@
         clicks.value++;
         if (clicks.value === 1) {
             timer.value = setTimeout(() => {
-                left.value = left.value + 100; // сдвинуть вправо на 100 пикселей //iodjsf
+                left.value = left.value + 100; // по одинарному клику сдвинуть вправо на 100 пикселей 
 
                 clicks.value = 0
             }, delay.value);
         } else {
             clearTimeout(timer.value);
-            top.value = top.value + 100 // сдвинуть вниз на 100 пикселей
+            top.value = top.value + 100 // по двойному клику сдвинуть вниз на 100 пикселей
 
             clicks.value = 0;
         }
