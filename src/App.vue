@@ -4,7 +4,7 @@
       <OnlyDivs
         :msg=el.value
         class="cell"
-        :color="`rgb(${el.color.r},${el.color.g+20*el.id},${el.color.b+20*el.id}`"
+        :color="`rgb(${255*Math.random()},${255*Math.random()},${255*Math.random()}`"
         :top=el.id*el.height
         :height=el.height
       />
@@ -15,6 +15,7 @@
 <script setup>
   import data from "./data/data.json";
   import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
+  console.log(Math.random())
 </script>
 
 <style>
