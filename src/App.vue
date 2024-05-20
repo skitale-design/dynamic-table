@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-for="el in data.numbers" :key="el.id">
+    <div v-for="el in data.cells" :key="el.id">
       <OnlyDivs
         :msg=el.value
         class="cell"
-        color="rgb(255, 177, 177)"
-        :top="100 + el.value"
+        :color=el.color 
+        :top=el.top
       />
     </div>
   </div>

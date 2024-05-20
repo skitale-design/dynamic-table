@@ -1,10 +1,7 @@
 {
-  "numbers": [
-    { "id": "1", "value": 100 },
-    { "id": "2", "value": 200 },
-    { "id": "3", "value": 300 },
-    { "id": "4", "value": 400 },
-    { "id": "5", "value": 500 },
-    { "id": "6", "value": 600 }
+  "cells": [
+    { "id": "1", "top": 100 , "left": 100, "value":"1", "color":"#eeffa8" },
+    { "id": "2", "top": 200 , "left": 200, "value":"2", "color":"#ffb1b1" },
+    { "id": "3", "top": 300 , "left": 300, "value":"3", "color":"#ffb1b1" }
   ]
 }
