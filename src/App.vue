@@ -1,17 +1,18 @@
 <template>
   <div>
-    <div v-for="el in elements" :key="el">
-      <OnlyDivs :msg=el class="cell" color="rgb(255, 177, 177)" :top="100+el" />
+    <div v-for="el in data" :key="el.id">
+      <OnlyDivs :msg=el.value class="cell" color="rgb(255, 177, 177)" :top=100+el.value />
     </div>
   </div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+// import {ref} from 'vue'
+import data from "./data/data.json";
 //import TheMain from './components/TheMain.vue'
  //import SystemElement from './components/SystemElement/TheIndex.vue'
 import OnlyDivs from './components/OnlyDivs/OnlyDivs.vue'
-const elements = ref([100,200,300,400,500,600])
+// const elements = ref([100,200,300,400,500,600])
 </script>
 
 <style>
