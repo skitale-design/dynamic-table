@@ -4,8 +4,8 @@
         "id": 1,
         "name": "System AAA",
         "cells": [
-          {"id": 1,"height": 100,"value": "1","color": { "r": 255, "g": 186, "b": 186 }},
-          {"id": 2,"height": 100,"value": "2","color": { "r": 255, "g": 186, "b": 186 }}
+          {"id": 1,"height": 100,"value": "1","color": { "r": 215, "g": 146, "b": 86 }},
+          {"id": 2,"height": 100,"value": "2","color": { "r": 215, "g": 146, "b": 86 }}
         ]
     },
     {

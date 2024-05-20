@@ -4,7 +4,7 @@
       <OnlyDivs
         :msg=el.value
         class="cell"
-        :color=RandomColor()
+        :color=ObjectToColor(el.color)
         :top=el.id*el.height
         :height=el.height
       />
@@ -15,9 +15,8 @@
 <script setup>
   import data from "./data/data.json";
   import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
-  
-  function RandomColor(){
-    return `rgb(${255*Math.random()},${255*Math.random()},${255*Math.random()}`
+  function ObjectToColor(obj){
+      return `rgb(${obj.r},${obj.g},${obj.b})` //todo есть специальный метод для вывода в формате RGB?
   }
 </script>
 
