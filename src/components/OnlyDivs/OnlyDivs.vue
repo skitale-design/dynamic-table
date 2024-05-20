@@ -25,6 +25,10 @@
         left: {
             type: Number,
             default: 10
+        },
+        height: {
+            type: Number,
+            default: 50
         }
     })
     const top = ref(props.top)
@@ -67,7 +71,7 @@
         top: v-bind(top + 'px');
         left: v-bind(left + 'px');
         width: 100px;
-        height: 80px;
+        height: v-bind(props.height);
         background-color: v-bind(props.color);
     }
 </style>

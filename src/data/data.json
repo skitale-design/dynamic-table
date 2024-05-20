@@ -1,7 +1,7 @@
 {
   "cells": [
-    { "id": "1", "top": 100 , "left": 100, "value":"1", "color":"#eeffa8" },
-    { "id": "2", "top": 200 , "left": 200, "value":"2", "color":"#ffb1b1" },
-    { "id": "3", "top": 300 , "left": 300, "value":"3", "color":"#ffb1b1" }
+    { "id": 1, "height": 100 , "value":"1", "color":{"r": 255, "g": 186, "b": 186} },
+    { "id": 2, "height": 100 , "value":"2",  "color":{"r": 255, "g": 186, "b": 186}  },
+    { "id": 3, "height": 100 , "value":"3",  "color":{"r": 255, "g": 186, "b": 186}  }
   ]
 }

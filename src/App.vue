@@ -4,8 +4,9 @@
       <OnlyDivs
         :msg=el.value
         class="cell"
-        :color=el.color 
-        :top=el.top
+        :color="`rgb(${el.color.r},${el.color.g+20*el.id},${el.color.b+20*el.id}`"
+        :top=el.id*el.height
+        :height=el.height
       />
     </div>
   </div>
@@ -26,7 +27,7 @@
   margin-top: 60px;
 }
 .red {
-  background-color: rgb(255, 177, 177);
+  background-color: rgb(255, 186, 186);
 }
 .blue {
   background-color: rgb(184, 207, 255);
