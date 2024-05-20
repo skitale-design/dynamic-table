@@ -6,30 +6,12 @@
     import {ref,defineProps} from 'vue'
 
     const props = defineProps({
-        color: {
-            type: String,
-            default: "red"
-        },
-        class:{
-            type: String,
-            default:"cell"
-        },
-        msg:{
-            type: String,
-            default: "default"
-        },
-        top: {
-            type: Number,
-            default: 10
-        },
-        left: {
-            type: Number,
-            default: 10
-        },
-        height: {
-            type: Number,
-            default: 50
-        }
+        color: {type: String, default: "red"},
+        class:{type: String,default:"cell"},
+        msg:{type: String,default: "default"},
+        top: {type: Number, default: 10},
+        left: {type: Number, default: 10},
+        height: {type: Number,default: 50}
     })
     const top = ref(props.top)
     const left = ref(props.left)
