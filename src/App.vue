@@ -1,13 +1,16 @@
 <template>
   <div>
-    <div v-for="el in data.systems[0].cells " :key="el.id">
-      <OnlyDivs
-        :msg=el.value
-        class="cell"
-        :color=ObjectToColor(el.color)
-        :top=el.id*el.height
-        :height=el.height
-      />
+    <div v-for="sys in data.systems" :key="sys.id">
+      <div v-for="el in sys.cells " :key="el.id">
+        <OnlyDivs
+          :msg=el.value
+          class="cell"
+          :left=sys.id*100
+          :color=ObjectToColor(el.color)
+          :top=el.id*el.height
+          :height=el.height
+        />
+      </div>
     </div>
   </div>
 </template>
