@@ -19,14 +19,9 @@
         <div class="block cc">counter</div>
         <div class="block hh">system</div>
         <div class="block sidebar">sidebar</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
-        <div class="block">cell</div>
+        <div class="block header">header</div>
+        <div class="block cell">cell</div>
+        <div class="block cell">cell</div>
     </div>
 </template>
 

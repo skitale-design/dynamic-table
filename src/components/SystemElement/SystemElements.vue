@@ -7,7 +7,7 @@
 
 <script>
     import SummColumn from './SummColumn.vue'
-    import MainColumn from './MainColumn/TheIndex.vue'
+    import MainColumn from './MainColumn/MainColumn.vue'
 
     export default {
         name: 'SystemElement',
