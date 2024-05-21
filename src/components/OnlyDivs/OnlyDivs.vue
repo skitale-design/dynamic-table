@@ -16,10 +16,12 @@
         msg:{type: String,default: "default"},
         top: {type: Number, default: 10},
         left: {type: Number, default: 10},
+        id: {type: Number, default: null},
         height: {type: Number,default: 50}
     })
     const top = ref(props.top)
     const left = ref(props.left)
+    const fontColor = ref(state.fontColor.color)
 
     const delay = ref(300)
     const clicks = ref(0)
@@ -45,8 +47,12 @@
     }
 
     function DoubleClickAction(){
+        state.currentId.id = props.id
+        // console.log(`state.currentId.id = ${state.currentId.id}`) //for debugging
         state.fontColor.red = !state.fontColor.red
     }
+
+
 
 </script>
 
@@ -57,7 +63,7 @@
         --left:v-bind(left + 'px');
         --height:v-bind(props.height + 'px');
         --color: v-bind(props.color);
-        --fontColor: v-bind(state.fontColor.red? 'red':'blue')
+        --fontColor: v-bind((id == state.currentId.id)?fontColor:"auto")
     }
 
     .cell {

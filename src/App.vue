@@ -9,6 +9,7 @@
           :color=ObjectToColor(el.color)
           :top=el.id*el.height
           :height=el.height
+          :id=el.id
         />
       </div>
     </div>
