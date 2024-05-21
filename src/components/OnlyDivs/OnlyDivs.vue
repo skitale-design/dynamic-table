@@ -24,16 +24,23 @@
         clicks.value++;
         if (clicks.value === 1) {
             timer.value = setTimeout(() => {
-                left.value = left.value + 100; // по одинарному клику сдвинуть вправо на 100 пикселей 
-
+                SingleClickAction()
                 clicks.value = 0
             }, delay.value);
         } else {
             clearTimeout(timer.value);
-            top.value = top.value + 100 // по двойному клику сдвинуть вниз на 100 пикселей
-
+            DoubleClickAction()
             clicks.value = 0;
         }
+    }
+
+    function SingleClickAction(){
+        console.log("singleClickAction")
+        left.value = left.value + 100;
+    }
+
+    function DoubleClickAction(){
+        top.value = top.value + 100
     }
 
 </script>
