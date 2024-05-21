@@ -1,5 +1,7 @@
 <template>
-    <div :class="props.class" @click="oneClick()">{{ msg }}</div>
+    <div class="wrapper">
+        <div :class="props.class" @click="oneClick()">{{ msg }}</div>
+    </div>
 </template>
 
 <script setup>
@@ -50,21 +52,29 @@
 </script>
 
 <style>
+
+    .wrapper{
+        --top:v-bind(top + 'px');
+        --left:v-bind(left + 'px');
+        --height:v-bind(props.height + 'px');
+        --color: v-bind(props.color);
+    }
+
     .cell {
         position: absolute;
-        top: v-bind(top + 'px');
-        left: v-bind(left + 'px');
+        top: var(--top);
+        left: var(--left);
         width: 100px;
-        height: v-bind(props.height+'px');
-        background-color: v-bind(props.color);
+        height: var(--height);
+        background-color: var(--color);
     }
 
     .head {
         position: absolute;
-        top: v-bind(top + 'px');
-        left: v-bind(left + 'px');
+        top: var(--top);
+        left: var(--left);
         width: 100px;
-        height: v-bind(props.height+'px');
-        background-color: v-bind(props.color);
+        height: var(--height);
+        background-color: var(--color);
     }
 </style>
