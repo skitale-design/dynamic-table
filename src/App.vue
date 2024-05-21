@@ -5,7 +5,7 @@
         <OnlyDivs
           :msg=el.value
           :class=el.class
-          :left=sys.id*100
+          :left=sys.id*100+50
           :color=ObjectToColor(el.color)
           :top=el.id*el.height
           :height=el.height

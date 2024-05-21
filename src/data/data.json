@@ -1,6 +1,15 @@
 {
   "systems": [
     {
+        "id": 0,
+        "name": "System AAA",
+        "cells": [
+          {"id": 0,"class":"head", "height": 90,"value": "ФИО","color": { "r": 215, "g": 46, "b": 86 }},
+          {"id": 1,"class":"cell", "height": 100,"value": "Иванов Иван Иванович","color": { "r": 215, "g": 46, "b": 86 }},
+          {"id": 2,"class":"cell", "height": 100,"value": "Петров Петр Петрович","color": { "r": 215, "g": 46, "b": 86 }}
+        ]
+    },
+    {
         "id": 1,
         "name": "System AAA",
         "cells": [
