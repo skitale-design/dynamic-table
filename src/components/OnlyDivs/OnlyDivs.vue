@@ -8,8 +8,7 @@
     import {ref,defineProps} from 'vue'
     import {state} from '../StateStore.js' 
 
-    console.log(state.summCol)
-
+    console.log(state.fontColor.red)
 
     const props = defineProps({
         color: {type: String, default: "red"},
@@ -46,7 +45,7 @@
     }
 
     function DoubleClickAction(){
-        top.value = top.value + 100
+        state.fontColor.red = !state.fontColor.red
     }
 
 </script>
@@ -58,6 +57,7 @@
         --left:v-bind(left + 'px');
         --height:v-bind(props.height + 'px');
         --color: v-bind(props.color);
+        --fontColor: v-bind(state.fontColor.red? 'red':'blue')
     }
 
     .cell {
@@ -67,6 +67,7 @@
         width: 100px;
         height: var(--height);
         background-color: var(--color);
+        color: var(--fontColor)
     }
 
     .head {
