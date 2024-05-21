@@ -4,6 +4,10 @@
 
 <script setup>
     import {ref,defineProps} from 'vue'
+    import {state} from '../StateStore.js' 
+
+    console.log(state)
+
 
     const props = defineProps({
         color: {type: String, default: "red"},
