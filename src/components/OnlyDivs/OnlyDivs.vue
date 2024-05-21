@@ -42,7 +42,7 @@
     }
 
     function SingleClickAction(){
-        console.log("singleClickAction")
+        console.log("singleClickActio()")
     }
 
     function DoubleClickAction(){
@@ -83,6 +83,7 @@
         height: var(--height);
         background-color: var(--color);
         color: var(--fontColor)
+        
     }
 
     .head {
