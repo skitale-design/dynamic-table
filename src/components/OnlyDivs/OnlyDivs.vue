@@ -47,11 +47,21 @@
     }
 
     function DoubleClickAction(){
+        clearSelection()
         state.currentId.id = props.id
         // console.log(`state.currentId.id = ${state.currentId.id}`) //for debugging
         state.fontColor.red = !state.fontColor.red
     }
 
+
+    function clearSelection() {
+            if (document.selection && document.selection.empty) {
+                document.selection.empty();
+            } else if (window.getSelection) {
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+            }
+        }
 
 
 </script>
