@@ -8,7 +8,7 @@
     import {ref,defineProps} from 'vue'
     import {state} from '../StateStore.js' 
 
-    console.log(state.fontColor.red)
+    console.log(state.fontWeight.bool)
 
     const props = defineProps({
         color: {type: String, default: "red"},
@@ -21,7 +21,7 @@
     })
     const top = ref(props.top)
     const left = ref(props.left)
-    const fontColor = ref(state.fontColor.color)
+    const fontWeight = ref(state.fontWeight.weight)
 
     const delay = ref(300)
     const clicks = ref(0)
@@ -49,7 +49,7 @@
         clearSelection()
         state.currentId.id = props.id
         // console.log(`state.currentId.id = ${state.currentId.id}`) //for debugging
-        state.fontColor.red = !state.fontColor.red
+        state.fontWeight.bool = !state.fontWeight.bool
     }
 
 
@@ -72,7 +72,7 @@
         --left:v-bind(left + 'px');
         --height:v-bind(props.height + 'px');
         --color: v-bind(props.color);
-        --fontColor: v-bind((id == state.currentId.id)?fontColor:"auto")
+        --fontWeight: v-bind((id == state.currentId.id)?fontWeight:"normal")
     }
 
     .cell {
@@ -82,7 +82,7 @@
         width: 100px;
         height: var(--height);
         background-color: var(--color);
-        color: var(--fontColor)
+        font-weight: var(--fontWeight) 
         
     }
 
