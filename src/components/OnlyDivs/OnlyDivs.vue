@@ -8,7 +8,7 @@
     import {ref,defineProps} from 'vue'
     import {state} from '../StateStore.js' 
 
-    console.log(state)
+    console.log(state.summCol)
 
 
     const props = defineProps({
