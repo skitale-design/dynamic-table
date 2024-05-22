@@ -1,19 +1,11 @@
 <template>
   <div>
-    <div v-for="h in users.headers" :key="h.id">
-      <OnlyDivs 
-        :msg="h.value"
-        :left="h.id*100"
-      />
-    </div>
     <div v-for="u in users.jsondata" :key="u.id">
-      <OnlyDivs 
-        :msg="u.name"
-        :top=u.id*100 
-      />
+      <OnlyDivs :msg="u.name" :top=u.id*100 />
       <div v-for="s in u.system " :key="s.id">
-        <div v-for="r in s.roles " :key="r.id">
-          <OnlyDivs/>          
+        <OnlyDivs :msg="s.name" :top="0" :left="s.id*100"/>
+        <div v-for="r in s.role " :key="r.id">
+          <OnlyDivs :msg="r.name" :top="50" :left="r.id*100" :height="50" color="yellow" />
         </div>
       </div>
     </div>

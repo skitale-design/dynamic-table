@@ -8,10 +8,8 @@
     import {ref,defineProps} from 'vue'
     import {state} from '../StateStore.js' 
 
-    console.log(state.fontWeight.bool)
-
     const props = defineProps({
-        color: {type: String, default: "#ffcaca"},
+        color: {type: String, default: "gray"},
         class:{type: String,default:"cell"},
         msg:{type: String,default: "default"},
         top: {type: Number, default: 10},
@@ -22,6 +20,9 @@
     const top = ref(props.top)
     const left = ref(props.left)
     const fontWeight = ref(state.fontWeight.weight)
+    const color = ref(props.color)
+
+    console.log(`props.color = ${props.color}`) //for debugging
 
     const delay = ref(300)
     const clicks = ref(0)
@@ -48,7 +49,6 @@
     function DoubleClickAction(){
         clearSelection()
         state.currentId.id = props.id
-        // console.log(`state.currentId.id = ${state.currentId.id}`) //for debugging
         state.fontWeight.bool = !state.fontWeight.bool
     }
 
@@ -71,7 +71,7 @@
         --top:v-bind(top + 'px');
         --left:v-bind(left + 'px');
         --height:v-bind(props.height + 'px');
-        --color: v-bind(props.color);
+        --mycolor: v-bind(color);
         --fontWeight: v-bind((id == state.currentId.id)?fontWeight:"normal")
     }
 
@@ -81,7 +81,7 @@
         left: var(--left);
         width: 100px;
         height: var(--height);
-        background-color: var(--color);
+        background-color: var(--mycolor);
         font-weight: var(--fontWeight) 
         
     }
@@ -92,6 +92,6 @@
         left: var(--left);
         width: 100px;
         height: var(--height);
-        background-color: var(--color);
+        background-color: var(--mycolor);
     }
 </style>
