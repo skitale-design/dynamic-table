@@ -8,7 +8,6 @@
           :left=sys.id*100+50
           :color=ObjectToColor(el.color)
           :top=el.id*el.height
-          :height=el.height
           :id=el.id
         />
       </div>
