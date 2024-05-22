@@ -11,13 +11,13 @@
     console.log(state.fontWeight.bool)
 
     const props = defineProps({
-        color: {type: String, default: "red"},
+        color: {type: String, default: "#ffcaca"},
         class:{type: String,default:"cell"},
         msg:{type: String,default: "default"},
         top: {type: Number, default: 10},
         left: {type: Number, default: 10},
         id: {type: Number, default: null},
-        height: {type: Number,default: 50}
+        height: {type: Number,default: 90}
     })
     const top = ref(props.top)
     const left = ref(props.left)
@@ -65,7 +65,7 @@
 
 </script>
 
-<style>
+<style scoped>
 
     .wrapper{
         --top:v-bind(top + 'px');

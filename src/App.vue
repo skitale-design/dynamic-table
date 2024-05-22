@@ -1,26 +1,31 @@
 <template>
   <div>
-    <div v-for="sys in data.systems" :key="sys.id">
-      <div v-for="el in sys.cells " :key="el.id">
-        <OnlyDivs
-          :msg=el.value
-          :class=el.class
-          :left=sys.id*100+50
-          :color=ObjectToColor(el.color)
-          :top=el.id*el.height
-          :id=el.id
-        />
+    <div v-for="h in users.headers" :key="h.id">
+      <OnlyDivs 
+        :msg="h.value"
+        :left="h.id*100"
+      />
+    </div>
+    <div v-for="u in users.jsondata" :key="u.id">
+      <OnlyDivs 
+        :msg="u.name"
+        :top=u.id*100 
+      />
+      <div v-for="s in u.system " :key="s.id">
+        <div v-for="r in s.roles " :key="r.id">
+          <OnlyDivs/>          
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-  import data from "./data/data.json";
+  import users from "./data/users.json";
   import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
-  function ObjectToColor(obj){
-      return `rgb(${obj.r},${obj.g},${obj.b})` //todo есть специальный метод для вывода в формате RGB?
-  }
+  // function ObjectToColor(obj){
+  //     return `rgb(${obj.r},${obj.g},${obj.b})` //todo есть специальный метод для вывода в формате RGB?
+  // }
 </script>
 
 <style>
