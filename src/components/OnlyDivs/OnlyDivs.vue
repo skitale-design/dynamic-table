@@ -44,6 +44,7 @@
 
     function SingleClickAction(){
         console.log("singleClickActio()")
+        left.value = left.value + 100
     }
 
     function DoubleClickAction(){
