@@ -1,12 +1,12 @@
 <template>
   <div>
     <div v-for="u in users.jsondata" :key="u.id">
-      <OnlyDivs :msg="u.name" :top=u.id*100 color="#B7FFE9"/>
+      <OnlyDivs :msg=u.name :top=u.id*100 color="#B7FFE9"/>
       <div v-for="s in u.system " :key="s.id">
-        <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" color="#98cbff"/>
+        <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" :id=s.id color="#98cbff" :type=s.type />
         <div v-for="r in s.role " :key="r.id">
-          <OnlyDivs :msg="r.name" :top="50" :left="r.id*100" :height="50" color="yellow"  width=33 />
-          <OnlyDivs :msg="r.value" :top="u.id*100" :left="r.id*100" :height="50" color="#F3D5FF" />
+          <OnlyDivs :msg=r.name :top="50" :left="r.id*100" :height="50" color="yellow" />
+          <OnlyDivs :msg=r.value :top="u.id*100" :left="r.id*100" :height="50" color="#F3D5FF" />
         </div>
       </div>
     </div>
