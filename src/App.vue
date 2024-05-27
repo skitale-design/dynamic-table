@@ -5,7 +5,8 @@
       <div v-for="s in u.system " :key="s.id">
         <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" color="#98cbff"/>
         <div v-for="r in s.role " :key="r.id">
-          <OnlyDivs :msg="r.name" :top="50" :left="r.id*100" :height="50" color="yellow" />
+          <OnlyDivs :msg="r.name" :top="50" :left="r.id*100" :height="50" color="yellow"  width=33 />
+          <OnlyDivs :msg="r.value" :top="u.id*100" :left="r.id*100" :height="50" color="#F3D5FF" />
         </div>
       </div>
     </div>

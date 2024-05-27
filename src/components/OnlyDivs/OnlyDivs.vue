@@ -15,7 +15,8 @@
         top: {type: Number, default: 10},
         left: {type: Number, default: 10},
         id: {type: Number, default: null},
-        height: {type: Number,default: 90}
+        height: {type: Number,default: 90},
+        width: {type: Number,default: 100}
     })
     const top = ref(props.top)
     const left = ref(props.left)
@@ -72,6 +73,7 @@
         --top:v-bind(top + 'px');
         --left:v-bind(left + 'px');
         --height:v-bind(props.height + 'px');
+        --width:v-bind(props.width + 'px');
         --mycolor: v-bind(color);
         --fontWeight: v-bind((id == state.currentId.id)?fontWeight:"normal")
     }
@@ -80,7 +82,7 @@
         position: absolute;
         top: var(--top);
         left: var(--left);
-        width: 100px;
+        width: var(--width);
         height: var(--height);
         background-color: var(--mycolor);
         font-weight: var(--fontWeight) 
@@ -91,7 +93,7 @@
         position: absolute;
         top: var(--top);
         left: var(--left);
-        width: 100px;
+        width: var(--width);
         height: var(--height);
         background-color: var(--mycolor);
     }
