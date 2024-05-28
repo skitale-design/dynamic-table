@@ -1,11 +1,9 @@
 <template>
   <div>
     <div v-for="u in users.jsondata" :key="u.id">
-      <OnlyDivs :msg="u.name" :top=u.id*100 color="#B7FFE9"/>
       <div v-for="s in u.system " :key="s.id">
-        <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" color="#98cbff"/>
-        <div v-for="r in s.role " :key="r.id">
-          <OnlyDivs :msg="r.name" :top="50" :left="r.id*100" :height="50" color="yellow" />
+        <div v-if="!state.SysIds.value.includes(s.id)" >
+          <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" color="#98cbff"/>
         </div>
       </div>
     </div>
@@ -15,9 +13,7 @@
 <script setup>
   import users from "./data/users.json";
   import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
-  // function ObjectToColor(obj){
-  //     return `rgb(${obj.r},${obj.g},${obj.b})` //todo есть специальный метод для вывода в формате RGB?
-  // }
+  import {state} from './components/StateStore.js' 
 </script>
 
 <style>

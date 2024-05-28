@@ -2,48 +2,54 @@
   "jsondata": [
     {
       "id": 1,
+      "type": "user",
       "name": "Иванов Иван Иванович",
       "system": [
         {
           "id": 1,
+          "type": "system",
           "name": "Система 1",
           "role": [
-            { "id": 1, "name": "Администратор", "value": 1 },
-            { "id": 2, "name": "Пользователь", "value": 0 },
-            { "id": 3, "name": "Гость", "value": 0 }
+            { "id": 1, "type": "cell", "name": "Администратор", "value": 1 },
+            { "id": 2, "type": "cell", "name": "Пользователь", "value": 0 },
+            { "id": 3, "type": "cell", "name": "Гость", "value": 0 }
           ]
         },
         {
           "id": 2,
+          "type": "system",
           "name": "Система 2",
           "role": [
-            { "id": 1, "name": "Бухгалтер", "value": 1 },
-            { "id": 2, "name": "Менеджер", "value": 0 },
-            { "id": 3, "name": "Аудитор", "value": 1 }
+            { "id": 1, "type": "cell", "name": "Бухгалтер", "value": 1 },
+            { "id": 2, "type": "cell", "name": "Менеджер", "value": 0 },
+            { "id": 3, "type": "cell", "name": "Аудитор", "value": 1 }
           ]
         }
       ]
     },
     {
       "id": 2,
+      "type": "user",
       "name": "Петров Петр Петрович",
       "system": [
         {
           "id": 1,
+          "type": "system",
           "name": "Система 1",
           "role": [
-            { "id": 1, "name": "Администратор", "value": 1 },
-            { "id": 2, "name": "Пользователь", "value": 0 },
-            { "id": 3, "name": "Гость", "value": 0 }
+            { "id": 1, "type": "cell", "name": "Администратор", "value": 1 },
+            { "id": 2, "type": "cell", "name": "Пользователь", "value": 0 },
+            { "id": 3, "type": "cell", "name": "Гость", "value": 0 }
           ]
         },
         {
           "id": 2,
+          "type": "system",
           "name": "Система 2",
           "role": [
-            { "id": 1, "name": "Бухгалтер", "value": 1 },
-            { "id": 2, "name": "Менеджер", "value": 0 },
-            { "id": 3, "name": "Аудитор", "value": 1 }
+            { "id": 1, "type": "cell", "name": "Бухгалтер", "value": 1 },
+            { "id": 2, "type": "cell", "name": "Менеджер", "value": 0 },
+            { "id": 3, "type": "cell", "name": "Аудитор", "value": 1 }
           ]
         }
       ]
