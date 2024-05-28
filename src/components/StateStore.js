@@ -1,8 +1,8 @@
-import { reactive } from "vue";
-export const state = reactive({
-  summCol: { hidden: false },
-  mainCol: { hidden: false },
-  fontWeight: { bool: false, weight: "bold" },
-  currentId: { id: null },
-  RenderedSystemIds: { ids: [0, 1, 2] },
-});
+import { ref, reactive } from "vue";
+export const state = {
+  summCol: reactive({ hidden: false }),
+  mainCol: reactive({ hidden: false }),
+  fontWeight: reactive({ bool: false, weight: "bold" }),
+  currentId: reactive({ id: null }),
+  RenderedSystemIds: ref([]),
+};

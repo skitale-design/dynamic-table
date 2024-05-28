@@ -1,8 +1,15 @@
 <template>
-    <div v-if="SystemNOTRendered()" class="wrapper">
-        <div :class="props.class" @click="oneClick()">{{ msg }}</div>
+    <div v-if="props.type==='system'">
+        <div v-if="SystemNOTRendered()" class="wrapper">
+            <div :class="props.class" @click="oneClick()">{{ msg }}</div>
+         </div>
     </div>
-</template>
+    <div v-else>
+        <div class="wrapper">
+            <div :class="props.class" @click="oneClick()">{{ msg }}</div>
+         </div>
+    </div>
+    </template>
 
 <script setup>
     import {ref,defineProps} from 'vue'
@@ -18,30 +25,32 @@
         height: {type: Number,default: 90},
         width: {type: Number,default: 100},
         type: {type: String,default: "cell"},
+        test: {type: String,default: "test"},
     })
+    state.currentId.id = ref(props.id)
+    
     const top = ref(props.top)
     const left = ref(props.left)
     const fontWeight = ref(state.fontWeight.weight)
     const color = ref(props.color)
-
-    // const testArr = ref([2,3,5])
-
-
+    
     const delay = ref(300)
     const clicks = ref(0)
     const timer = ref(null)
-
+    
     function SystemNOTRendered(){
-        console.log(`state.RenderedSystemIds.ids = ${state.RenderedSystemIds.ids}`) //for debugging
-        return true
-        // if (props.type=="system" && testArr.value.contains(props.id)) {
-        //     console.log(`props.type = ${props.type}`) //for debugging
-        //     state.RenderedSystemIds.ids.push(props.id)
-        //     return true
-        // }
-        // else{
-        //     return false
-        // }
+            if(props.type==="system" && IdIsNotInArray(state.currentId.id)){
+                state.RenderedSystemIds.value.push(state.currentId.id)
+                                                                                    // console.log(`state.RenderedSystemIds.value = ${state.RenderedSystemIds.value}`) // test
+                return true
+            }else{
+                return false
+            }
+
+    }
+
+    function IdIsNotInArray(id) {
+        return !state.RenderedSystemIds.value.includes(id)
     }
 
     function oneClick(){
