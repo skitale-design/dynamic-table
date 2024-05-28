@@ -15,6 +15,7 @@
         top: {type: Number, default: 10},
         left: {type: Number, default: 10},
         id: {type: Number, default: null},
+        type: {type: String, default: "cell"},
         height: {type: Number,default: 90}
     })
     const top = ref(props.top)
