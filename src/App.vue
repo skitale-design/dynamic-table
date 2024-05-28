@@ -3,7 +3,7 @@
     <div v-for="u in users.jsondata" :key="u.id">
       <div v-for="s in u.system " :key="s.id">
         <div v-if="!state.SysIds.value.includes(s.id)" >
-          <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" color="#98cbff"/>
+          <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" color="#98cbff" :type=s.type/>
         </div>
       </div>
     </div>
