@@ -23,6 +23,26 @@
     const fontWeight = ref(state.fontWeight.weight)
     const color = ref(props.color)
 
+    console.log(`-------------`)
+    console.log(`state.SysIds.value.includes(props.id) = ${state.SysIds.value.includes(props.id)}`)
+    console.log(`props.color = ${props.color}`)
+    console.log(`props.class = ${props.class}`)
+    console.log(`props.msg = ${props.msg}`)
+    console.log(`props.top = ${props.top}`)
+    console.log(`props.left = ${props.left}`)
+    console.log(`props.id = ${props.id}`)
+    console.log(`props.type = ${props.type}`)
+    console.log(`props.height = ${props.height}`)
+
+
+    if (props.type === "system") {
+        if(!state.SysIds.value.includes(props.id)){
+                state.SysIds.value.push(props.id)
+                console.log(`state.SysIds.value = ${state.SysIds.value}`) //for debugging
+            }
+
+    }
+
     console.log(`props.color = ${props.color}`) //for debugging
 
     const delay = ref(300)
