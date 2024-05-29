@@ -1,9 +1,12 @@
 <template>
   <div>
+    <span>{{ `>>>> [${console.log(`>>>> [${state.SysIds.value}]`)}]` }}</span>
     <div v-for="u in users.jsondata" :key="u.id">
-      <div v-for="s in u.system " :key="s.id">
+      <div> {{ `${u.id}_${console.log(`>>>> u.id : [${u.id}]`)}` }}</div>
+      <div v-for="s in u.system " :key="s.id" >
+        <span>{{ `${console.log(`>>> [${state.SysIds.value}].includes(${s.id}): ${state.SysIds.value.includes(s.id)}`)}` }}</span>
         <div v-if="!state.SysIds.value.includes(s.id)" >
-          <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" :id="s.id" color="#98cbff" :type=s.type />
+          <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" :id="s.id" color="#98cbff" :type=s.type ref="system" />
         </div>
       </div>
     </div>
