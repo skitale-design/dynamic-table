@@ -1,12 +1,11 @@
 <template>
   <div>
-    <span>{{ `>>>> [${console.log(`>>>> [${state.SysIds.value}]`)}]` }}</span>
-    <div v-for="u in users.jsondata" :key="u.id">
-      <div> {{ `${u.id}_${console.log(`>>>> u.id : [${u.id}]`)}` }}</div>
+    <div v-for="u in json" :key="u.id">
       <div v-for="s in u.system " :key="s.id" >
-        <span>{{ `${console.log(`>>> [${state.SysIds.value}].includes(${s.id}): ${state.SysIds.value.includes(s.id)}`)}` }}</span>
-        <div v-if="!state.SysIds.value.includes(s.id)" >
-          <OnlyDivs :msg="s.name" :top="0" :left="s.id*100" :id="s.id" color="#98cbff" :type=s.type ref="system" />
+        <!-- <span>{{ `${console.log(`>>> [${ids}].includes(${s.id}): ${ids.includes(s.id)}`)}` }}</span> -->
+        <div v-if="!ids.includes(s.id)" >
+            <span>{{ ids.push(s.id) }}</span>
+            PUSH {{ s.name }}
         </div>
       </div>
     </div>
@@ -14,9 +13,26 @@
 </template>
 
 <script setup>
+  // import {reactive} from 'vue'
   import users from "./data/users.json";
-  import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
-  import {state} from './components/StateStore.js' 
+  // import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
+  //import {state} from './components/StateStore.js' 
+
+  const json = users.jsondata.map(user => ({
+  ...user, 
+  system: user.system.map(system => ({
+    ...system,
+    role: system.role.map(role => ({
+      ...role
+    }))
+  }))
+}))
+
+const ids = [] //state.SysIds.value
+
+// console.log([...new Set(json.flatMap(x=>x.system.map(x=>x.id)))]) // [1,2] - список уникальных id систем
+
+
 </script>
 
 <style>
