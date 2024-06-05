@@ -2,11 +2,12 @@
   <div>
     <div v-for="u in json" :key="u.id">
       <div v-for="s in u.system " :key="s.id" >
-        <!-- <span>{{ `${console.log(`>>> [${ids}].includes(${s.id}): ${ids.includes(s.id)}`)}` }}</span> -->
-        <div v-if="!ids.includes(s.id)" >
-            <span>{{ ids.push(s.id) }}</span>
-            PUSH {{ s.name }}
-        </div>
+        <!-- <div v-if="!ids.includes(s.id)" > -->
+          <span>{{ `>>>> ${console.log(`>>> ![${ids}].includes(${s.id}): ${!ids.includes(s.id)}`)}` }}</span>
+            <!-- <span>{{ ids.push(s.id) }}</span> -->
+            <TheTmp v-if="!ids.includes(s.id)" :msg="s.name" :id="s.id" v-on:push="AddToIds" />
+
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -15,7 +16,7 @@
 <script setup>
   // import {reactive} from 'vue'
   import users from "./data/users.json";
-  // import OnlyDivs from "./components/OnlyDivs/OnlyDivs.vue";
+  import TheTmp from "./components/TheTmp.vue";
   //import {state} from './components/StateStore.js' 
 
   const json = users.jsondata.map(user => ({
@@ -29,6 +30,17 @@
 }))
 
 const ids = [] //state.SysIds.value
+
+function AddToIds(id){
+  if (!ids.includes(id)) {
+    console.log(`--- ДО id:${id}`)
+    ids.push(id)
+    console.log(`ПОСЛЕ id:${id}`)
+    console.log(`ids: [${ids}]`)
+  }
+
+}
+
 
 // console.log([...new Set(json.flatMap(x=>x.system.map(x=>x.id)))]) // [1,2] - список уникальных id систем
 
@@ -51,3 +63,5 @@ const ids = [] //state.SysIds.value
 .purple {background-color: rgb(229, 190, 255);}
 .yellow {background-color: rgb(223, 213, 155);}
 </style>
+
+
