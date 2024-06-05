@@ -4,7 +4,7 @@
 
 <script setup>
     import {defineProps,defineEmits} from 'vue'
-    const props = defineProps({        msg: {type: String, default: "tmp"},        id: {type: Number, default: null}    })
+    const props = defineProps({msg: {type: String, default: "tmp"}, id: {type: Number, default: null}})
     const emits = defineEmits(['push'])
     emits('push',props.id)
     console.log(`TheTmp >> props.id:${props.id}`)

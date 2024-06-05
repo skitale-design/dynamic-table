@@ -22,7 +22,7 @@
     }))
   }))
 }))
-const ids = [] //state.SysIds.value
+const ids = []
 function AddToIds(id){
   if (!ids.includes(id)) {
     console.log(`--- ДО id:${id}`)
