@@ -1,7 +1,5 @@
 <template> 
-    <div>
         <div class="tmp">{{ ` **** ${console.log(`***** ${props.id} `)}`}}</div>
-    </div>
 </template>
 
 <script setup>
